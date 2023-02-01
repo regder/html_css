@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Selectors</title>
+		<link rel="stylesheet" type="text/css" href="selector.css"/>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<!--Псевдокласс last-child-->
+		<h3>Смартфоны</h3>
+        <div>
+            <a>Samsung Galaxy S7</a><br/>
+            <a>Apple iPhone SE</a><br/>
+            <a>Huawei P9</a>
+        </div>
+        
+		<!--Селектор :only-child выбирает элементы, которые являются единственными дочерними элементами в контейнерах-->
+		
+		<h2>Заголовок</h2>
+        <div>
+            <p>Текст1</p>
+        </div>
+        <div>
+            <p>Текст2</p>
+            <p>Параграфы с текстами "Текст1" и "Текст4" являются единственными дочерними элементами в своих внешних контейнерах, поэтому к ним применяется стиль - красный цвет шрифта</p>
+        </div>
+        <div>
+            <p>Текст4</p>
+        </div>
+
+        <!--Псевдокласс only-of-type-->
+        <!--div определен стиль, он не будет применяться, так как в контейнере body находится два элемента div, а не один-->
+        <div>
+            Header
+        </div>
+        <p>Единственный параграф и <span>элемент спан</span></p>
+        <div>
+            Footer
+        </div>
+
+
+		<h2>Заголовок</h2>
+ 		<!--Если же между заголовком и блоков div будет находиться еще какой-либо элемент, то к нему не будет применяться стиль-->
+		<!--<p>Элемент между заголовком и блоком div</p>-->
+		 
+		<div>
+		    <p>Текст первого блока</p>
+		    <p>Текст первого блока</p>
+		    <p>Текст первого блока</p>
+		</div>
+
+		<div>
+            <p>Текст второго блока</p>
+        </div>
+        <a href="index.html">Учебник по CSS3</a>
+        <input type="text" /><br/><br/>
+        <!--Селектор :not-->
+        <a>Первая ссылка</a><br/>
+        <a class="blueLink">Вторая ссылка</a><br/>
+        <a>Третья ссылка</a>
+        <form>
+            <p lang="ru-RU">Я изучаю CSS3</p>
+            <p lang="en-US">I study CSS3</p>
+            <p lang="de-DE">Ich lerne CSS3</p>
+        </form>  
+        
+        <!--Псевдокласс nth-child-->
+        <h3>Смартфоны</h3>
+        <table>
+            <tr><td>Samsung</td><td>Galaxy S7 Edge</td><td>60000</td></tr>
+            <tr><td>Apple</td><td>iPhone SE</td><td>39000</td></tr>
+            <tr><td>Microsoft</td><td>Lumia 650</td><td>13500</td></tr>
+            <tr><td>Alcatel</td><td>Idol S4</td><td>30000</td></tr>
+            <tr><td>Huawei</td><td>P9</td><td>60000</td></tr>
+            <tr><td>HTC</td><td>HTC 10</td><td>50000</td></tr>
+            <tr><td>Meizu</td><td>Pro 6</td><td>40000</td></tr>
+            <tr><td>Xiaomi</td><td>Mi5</td><td>35000</td></tr>
+        </table>   
+	</body>
+</html>

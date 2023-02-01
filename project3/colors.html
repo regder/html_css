@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Colors and fonts</title>
+	<link rel="stylesheet" type="text/css" href="colors.css"/>
+</head>
+<body>	
+	<div>
+		<h2>Значение RGBA</h2>
+		<p>Это тоже самое значение RGB плюс компонент прозрачности (Alpha). Компонент прозрачности имеет значение от 0 (полностью прозрачный) до 1 (не прозрачный).</p>
+	</div>
+	
+	<form>
+		<!-- text-transform -->
+		<div>
+	        <p class="capitalize">Текст использует значение capitalize</p>
+	        <p class="lowercase">Текст использует значение lowercase</p>
+	        <p class="uppercase">Текст использует значение uppercase</p>
+    	</div>
+	</form>
+
+	<!-- text-decoration -->
+	<div>
+        <p class="under">Это подчеркнутый текст.</p>
+        <p class="over">Это надчеркнутый текст</p>
+        <p class="line">Это зачеркнутый текст</p>
+        <p class="mixed">Это подчеркнутый и зачеркнутый текст</p>
+        <p>Не подчеркнутая <a href="index.php" class="none">ссылка<a></p>
+    </div>
+
+    <!-- Межсимвольный интервал -->
+    <div>
+        <h3>Обычный текст</h3>
+        <p>Над ним не было ничего уже, кроме неба...</p>
+        <h3>letter-spacing: -1px;</h3>
+        <p class="smallLetterSpace">Над ним не было ничего уже, кроме неба...</p>
+        <h3>letter-spacing: 1px;</h3>
+        <p class="bigLetterSpace">Над ним не было ничего уже, кроме неба...</p>
+        <h3>word-spacing: -1px</h3>
+        <p class="smallWordSpace">Над ним не было ничего уже, кроме неба...</p>
+        <h3>word-spacing: 1px</h3>
+        <p class="bigWordSpace">Над ним не было ничего уже, кроме неба...</p>
+    </div>
+    <h1>text-shadow</h1>
+
+    <!-- line-height -->
+    <p class="line">Над ним не было ничего уже, кроме неба...</p>
+    <p class="line">Над ним не было ничего уже, кроме неба...</p>
+    <p class="line">Над ним не было ничего уже, кроме неба...</p><br/>
+    
+    <p class="aligns">Над ним не было ничего уже, кроме неба...</p>
+
+    <p class="ind">Над ним не было ничего уже, кроме неба...</p>
+
+    <!-- list-style-type -->
+    <ol>
+        <li>Элемент 1</li>
+        <li class="decimal">Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+    </ol>
+
+    <!-- list-style-position -->
+    <h3>Inside</h3>
+    <ul class="inside">
+        <li>Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...</li>
+        <li>Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...</li>
+    </ul>
+    <h3>Outside</h3>
+    <ul class="outside">
+        <li>Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...</li>
+        <li>Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...</li>
+    </ul>
+
+    <!-- border-collapse -->
+    <h3>Collapse</h3>
+    <table class="collapsed">
+        <tr><th>Модель</th><th>Производитель</th><th>Цена</th></tr>
+        <tr><td>Lumia 950</td><td>Microsoft</td><td>29900</td></tr>
+        <tr><td>iPhone 6S</td><td>Apple</td><td>52900</td></tr>
+        <tr><td>Nexus 6P</td><td>Huawei</td><td>49000</td></tr>
+    </table>
+    <h3>Separate</h3>
+    <table class="separated">
+        <tr><th>Модель</th><th>Производитель</th><th>Цена</th></tr>
+        <tr><td>G 5</td><td>LG</td><td>44900</td></tr>
+        <tr><td>HTC 10</td><td>HTC</td><td>49900</td></tr>
+        <tr><td>Nexus 5X</td><td>Google/LG</td><td>25000</td></tr>
+    </table>
+    <h3>Top</h3>
+        <table>
+            <caption>Флагманы 2015 года</caption>
+            <tr><th>Модель</th><th>Производитель</th><th>Цена</th></tr>
+            <tr><td>Lumia 950</td><td>Microsoft</td><td>29900</td></tr>
+            <tr><td>iPhone 6S</td><td>Apple</td><td>52900</td></tr>
+            <tr><td>Nexus 6P</td><td>Huawei</td><td>49000</td></tr>
+        </table>
+        <h3>Bottom</h3>
+        <table class="captionBottom">
+            <caption>Новинки 2016 года</caption>
+            <tr><th>Модель</th><th>Производитель</th><th>Цена</th></tr>
+            <tr><td>G 5</td><td>LG</td><td>44900</td></tr>
+            <tr><td>HTC 10</td><td>HTC</td><td>49900</td></tr>
+            <tr><td>iPhone SE</td><td>Apple</td><td>37000</td></tr>
+        </table>
+</body>
+</html>

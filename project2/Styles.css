@@ -1,0 +1,51 @@
+h2, h1{
+    color:blue;
+    margin: 10px;
+}
+div{
+     
+    height: 100px; 
+    background-color: red;
+    margin: 10px; /* отступ от других элементов */   
+    border: 1px solid #222; 
+}
+.redBlock{
+    background-color:red;
+}
+
+.blueBlock{
+    background-color: blue;
+}
+.header{
+
+    height: 80px;
+    background-color: #ccc;
+}
+.content{
+    height: 180px;
+    background-color: #eee;
+}
+.footer{
+    height: 80px;
+    background-color: #ccc;
+}
+li .redLink{
+    color: red;
+}
+/*Данный пробел играет большое значение и указывает как раз, что элементы с классом redLink должны быть вложенными по отношению к элементу <li>*/
+
+/*Для обращения к дочерним элементам используется знак угловой скобки*/
+.article > p{
+      
+    color: blue;
+    border: none;    
+}
+.article{
+    border: none;
+    background-color: white;
+}
+.cont{
+    border: none;
+    background-color: white;
+}
+

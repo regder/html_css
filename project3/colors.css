@@ -1,0 +1,156 @@
+h2{        
+    background-color: rgb(28, 68, 99);
+    background-color: hsl(206, 56%, 25%);
+    color: rgb(255, 255, 255);
+    font-family: FontAwesome;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+
+}
+/*Если название шрифта состоит из нескольких слов, например, Times New Roman, то все название заключается в кавычки:*/
+/*font-family: "Times New Roman";*/
+
+/*Свойство font-weight задает толщину шрифта*/
+/*font-weight: normal;
+font-weight: bold;*/
+
+/*Свойство font-style позволяет выделить текст курсивом p {font-style: italic;}*/
+
+/*шрифт можно подключить с помощью директивы font-face
+@font-face {
+     
+    font-family: 'Roboto';
+    src: url(http://fonts.gstatic.com/s/roboto/v15/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2);
+}*/
+@font-face {
+     
+    font-family:'FontAwesome';
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.eot');
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.woff2') format('woff2'),
+         url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.woff') format('woff'),
+         url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.ttf') format('truetype'),
+         url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.svg') format('svg');
+}
+/*Чтобы браузер мог автоматически распознавать разные варианты шрифта, 
+к директиве @font-face добавляются свойства font-weight и font-style, 
+которые соответственно устанавливают выделение жирным и выделение курсивом*/
+
+/*Единица измерения еm во многом эквивалентна процентам. Так, 1em равен 100%, .5em равно 50% и т.д.*/
+
+/*capitalize: делает первую букву слова заглавной
+uppercase: все слово переводится в верхний регистр
+lowercase: все слово переводится в нижний регистр
+none: регистр символов слова никак не изменяется*/
+p.lowercase {text-transform: lowercase;}
+p.uppercase {text-transform: uppercase;}
+p.capitalize { text-transform: capitalize;}
+
+/*underline: подчеркивает текст
+overline: надчеркивает текст, проводит верхнюю линию
+line-through: зачеркивает текст
+none: к тексту не применяется декорирование*/
+p.under {
+    text-decoration: underline;
+}
+p.over {
+    text-decoration: overline;
+    }
+p.line {
+    text-decoration: line-through;
+}
+p.mixed {
+    text-decoration: underline line-through;
+}
+a.none {
+    text-decoration: none;
+}
+
+/*Для межсимвольного интервала применяется атрибут letter-spacing, а для интервала между словами - word-spacing:*/
+            p.smallLetterSpace {
+                letter-spacing: -1px;
+            }
+            p.bigLetterSpace {
+                letter-spacing: 1px;
+            }
+            p.smallWordSpace{
+                word-spacing: -1px;
+            }
+            p.bigWordSpace{
+                word-spacing: 1px;
+            }
+
+/*С помощью свойства text-shadow можно создать тени для текста*/
+h1{
+    text-shadow: 5px 4px 3px #999;
+}
+
+/*Свойство line-height определяет межстрочный интервал. Для его установки можно использовать пиксели, проценты или единицы em.*/
+p.line{
+    line-height: 100%;
+}
+
+/*Свойство text-align выравнивает текст относительно одной из сторон веб-страницы*/
+p.aligns{
+    text-align: center;
+}
+
+/*Свойство text-indent задает отступ первой строки абзаца*/
+p.ind{
+    text-indent: 35px;
+}
+
+.decimal{
+    list-style-type: decimal;
+}
+ol{
+    list-style-type: lower-roman;
+}
+
+/*list-style-position / outside (по умолчанию) и inside (обеспечивает равномерное распределение по ширине).*/
+ul.outside{
+                list-style-position: outside;
+            }
+            ul.inside{
+                list-style-position: inside;
+            }
+
+/*border-collapse*/
+table {
+            border: 1px solid #ccc;
+            border-spacing: 3px;
+        }
+         
+        td, th{
+            border: solid 1px #ccc;
+            vertical-align: bottom;
+            height: 30px;
+        }
+/*collapse: смежные ячейки имеют общую границу*/
+        .collapsed{
+            border-collapse: collapse; 
+        }
+/*separate: смежные ячейки имеют отдельные границы, которые разделяются пространством*/
+        .separated{
+            border-collapse: separate;
+        }
+/*caption-side управляет позицией заголовка*/
+.captionBottom{
+            caption-side: bottom;
+        }
+caption {         
+    font-weight: bold;
+}
+
+/*table-layout можно управлять размером таблицы
+значения - fixed можно установить фиксированную ширину
+table-layout: fixed;
+width:350px;*/
+
+/*Вертикальное выравнивание ячеек 
+top: выравнивание содержимого по верху ячейки
+baseline: выравнивание первой строки текста по верху ячейки
+middle: выравнивание по центру (значение по умолчанию)
+bottom: выравнивание по низу
+Свойство vertical-align применяется только к элементам <th> и <td>:*/

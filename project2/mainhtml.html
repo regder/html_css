@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Styles</title>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<style>
+			#main p{
+                font-size: 16px;
+            }
+            #footers p{
+                font-size: 13px;
+            }
+		</style>
+	</head>
+	<body>
+		<h2>Стили</h2>
+	    <div></div>
+	    <!--Если у элемента определены встроенные стили (inline-стили), то они имеют высший приоритет, то есть в примере выше итоговой шириной будет 120 пикселей
+		Далее в порядке приоритета идут стили, которые определены в элементе style
+		Наименее приоритетными стилями являются те, которые определены во внешнем файл-->
+
+		<!--Для определения селектора класса в CSS перед названием класса ставится точка-->
+		<div class="redBlock"></div>
+		<div class="blueBlock"></div>
+
+		<!--Для идентификации уникальных на веб-станице элементов используются идентификаторы, которые определяются с помощью атрибутов id/
+		вместо точки ставится символ решетки #-->
+
+		<div class="header" >Шапка сайта</div>
+        <div class="content">Основное содержимое</div>
+        <div class="footer">Футер</div>
+
+        <!--Кроме селекторов тегов, классов и идентификаторов в css также есть так называемый универсальный селектор, который представляет знак звездочки (*). Он применяет стили ко всем элементам на html-странице
+        *{      
+		    background-color: red;
+		}-->
+		<h1>CSS3<h1>
+        <h2>Селекторы</h2>
+        <h3>Группа селекторов</h3>
+        <p>Некоторый текст...</p>
+
+        <div id="header">
+            <p>Первый абзац</p>
+            <p>Второй абзац</p>
+        </div>
+        <div id="footers">
+            <p>Текст футера</p>
+        </div>
+
+
+        <ul>
+            <li>Самсунг: <a class="redLink">Galaxy S7 Edge</a></li>
+            <li>Apple: <a>iPhome SE</a></li>
+            <li>LG: <a class="redLink">LG G5</a></li>
+            <li>Microsoft: <a>Lumia 650</a></li>
+        </ul>
+
+        <div class="article">
+            <p>Аннотация к статье</p>
+            <div class="cont">
+                <p>Текст статьи</p>
+            </div>
+        </div>
+	</body>
+</html>

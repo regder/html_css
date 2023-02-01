@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>adaptive</title>
+		<link rel="stylesheet" type="text/css" href="adaptive.css" />		
+	</head>
+	<body>
+		<div>
+			<h1>Viewport</h1>
+			<div>
+				<h2>Video</h2>
+				<!-- /*Для воспроизведения видео в HTML5 используется элемент video. Чтобы настроить данный элемент, мы можем использовать следующие его атрибуты:
+				src: источник видео, это может быть какой-либо видеофайл
+				width: ширина элемента
+				height: высота элемента
+				controls: добавляет элементы управления воспроизведением
+				autoplay: устанавливает автовоспроизведение
+				loop: задает повторение видео
+				muted: отключает звук по умолчанию*/ -->
+				<video width="400" height="300" controls>
+					<!-- preload призван управлять загрузкой видео. Он принимает следующие значения:
+					auto: видео и связанные с ним метаданные будут загружаться до того, как видео начнет воспроизводиться.
+					none: видео не будет загружаться в фоне, пока пользователь не нажмет на кнопку начала проигрывания
+					metadata: в фоне до воспроизведения будут загружаться только метаданные (данные о формате, длительности и т.д), само видео не загружается -->
+					<!-- Атрибут poster позволяет установить изображение, которое будет отображаться до запуска видео. Этому атрибуту в качестве значения передается путь к изображению:<video src="cats.mp4" width="400" height="300" controls poster="mycat.jpg"></video> -->
+				    <source src="video/NF-PAID MY DUES.mp4" type="video/mp4">
+				    <source src="video/NF-PAID MY DUES.mp4" type="video/webm">
+				    <source src="video/NF-PAID MY DUES.mp4" type="video/ogg">
+				</video>
+				<div id="controls" class="hidden">
+		            <a id="playBtn">Play</a>
+		            <span id="timer">00:00</span>
+		            <input type="range" step="0.1" min="0" max="1" value="0" id="volume" />
+		        </div>
+		        <script>
+		        // получаем все элементы
+		        var videoEl = document.getElementsByTagName('video')[0],
+		            playBtn = document.getElementById('playBtn'),
+		            vidControls = document.getElementById('controls'),
+		            volumeControl = document.getElementById('volume'),
+		            timePicker = document.getElementById('timer');
+		        
+		        // если браузер может воспроизводить видео удаляем класс
+		        videoEl.addEventListener('canplaythrough', function () {
+		            vidControls.classList.remove('hidden');
+		            videoEl.volume = volumeControl.value;
+		        }, false);
+		        // запускам или останавливаем воспроизведение
+		        playBtn.addEventListener('click', function () {
+		            if (videoEl.paused) { // если видео остановлено, запускаем
+		                videoEl.play();
+		            } else {
+		                videoEl.pause();
+		            }
+		        }, false);
+
+		        //надпись на ссылке 
+		        videoEl.addEventListener('play', function () {
+		         
+		            playBtn.innerText = "Pause";
+		        }, false);
+		         
+		        videoEl.addEventListener('pause', function () {
+		         
+		            playBtn.innerText = "Play";
+		        }, false);
+
+		        //изменение ползунка и громкость видео 
+		        volumeControl.addEventListener('input', function () {
+		         
+		            videoEl.volume = volumeControl.value;
+		        }, false);
+
+		        //ended позволит сбросить время воспроизведения
+		        videoEl.addEventListener('ended', function () {
+		            videoEl.currentTime = 0;
+		        }, false);
+
+		        //timeupdate позволит динамически изменять показатель времени воспроизведения
+		        videoEl.addEventListener('timeupdate', function () {
+		            timePicker.innerHTML = secondsToTime(videoEl.currentTime);
+		        }, false);
+		         
+		        // рассчет отображаемого времени
+		        function secondsToTime(time){
+		             
+		            var h = Math.floor(time / (60 * 60)),
+		                dm = time % (60 * 60),
+		                m = Math.floor(dm / 60),
+		                ds = dm % 60,
+		                s = Math.ceil(ds);
+		            if (s === 60) {
+		                s = 0;
+		                m = m + 1;
+		            }
+		            if (s < 10) {
+		                s = '0' + s;
+		            }
+		            if (m === 60) {
+		                m = 0;
+		                h = h + 1;
+		            }
+		            if (m < 10) {
+		                m = '0' + m;
+		            }
+		            if (h === 0) {
+		                fulltime = m + ':' + s;
+		            } else {
+		                fulltime = h + ':' + m + ':' + s;
+		            }
+		            return fulltime;
+		        }
+		        </script>
+
+				<!-- элемент audio. Он во многом похож на элемент video. Для настройки элемента audio мы можем использовать следующие его атрибуты:
+				src: путь к аудиофайлу
+				controls: добавляет элементы управления воспроизведением
+				autoplay: устанавливает автовоспроизведение
+				loop: задает повторение аудиофайла
+				muted: отключает звук по умолчанию
+				preload: устанавливает режим загрузки файла -->
+				<div>
+					<h2>Audio</h2>
+					<audio width="400" height="300" controls>
+						<source src="audio/Hollywood Undead - Bitches.mp3" type="audio/mpeg">						
+					</audio>
+				</div>				
+			</div>			
+		</div>
+	</body>
+</html>

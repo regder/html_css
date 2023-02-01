@@ -1,0 +1,47 @@
+h2+div { color: red; }
+            /*стилизовать вообще все смежные элементы одного уровня знак тильды "~" / h2~div { color: red; }*/
+            a:link    {color:blue; text-decoration:none}
+            a:visited {color:pink; text-decoration:none}
+            a:hover   {color:red; text-decoration:underline}
+            a:active  {color:yellow; text-decoration:underline}
+            input:hover {border:2px solid red;}
+            /*Селектор :not() позволяет выбрать все элементы кроме определенных, то есть исключить некоторые элементы из выбора*/
+            a:not(.blueLink) { color: red; }
+            /*Селектор :lang выбирает элементы на основании атрибута lang:*/
+            :lang(ru) {
+                color: blue;
+            }
+            :lang(en) {
+                color: green;
+            }
+            a:last-child{
+             
+                color: blue;
+            }
+            p:only-child{
+                color:red;
+            }
+            span:only-of-type{
+         
+                color: green;   /* зеленый цвет */
+            }
+            p:only-of-type{
+             
+                color: red; /* красный цвет */
+            }
+            div:only-of-type{
+             
+                color: blue;    /* синий цвет */
+            }
+/*Псевдокласс nth-child позволяет стилизовать каждый второй, третий элемент, только четные или только нечетные элементы и т.д.*/
+tr:nth-child(odd) { background-color: #bbb; }
+tr:nth-child(even) { background-color: #fff; }
+tr:nth-child(3) { background-color: blue; }
+tr:nth-last-child(1) { 
+    background-color: #bbb; /* 2 строка с конца, то есть предпоследняя  */
+}
+tr:nth-of-type(1) { 
+    background-color: red;
+}
+
+/*tr:nth-child(2n+1) { background-color: #bbb; } Здесь стиль применяется к каждой второй нечетной строке.*/

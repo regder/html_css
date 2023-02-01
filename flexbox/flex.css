@@ -1,0 +1,149 @@
+.flex-container {
+    display: flex;
+    border:2px solid #ccc;    
+    height:9.5em;
+    flex-wrap: wrap;    
+    /*flex-flow: [flex-direction] [flex-wrap]*/
+}
+.flex-item {
+    text-align:center;
+    font-size: 1.1em;
+    padding: 1.5em;
+    color: white;
+    opacity: 0.8;
+}
+.color1 {background-color: #675BA7;}
+.color2 {background-color: #9BC850;}
+.color3 {background-color: #A62E5C;}
+.color4 {background-color: #2A9FBC;}
+.color5 {background-color: #F15B2A;}
+
+.inline-flex-container {
+    display: inline-flex;
+    border:2px solid #ccc;
+    margin-top:10px;
+}
+.row {
+    flex-direction: row;
+}
+.row-reverse {
+    flex-direction: row-reverse;
+}
+.column {
+    flex-direction: column;
+}
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+/*order*/
+.group1{
+    order:-1;
+}
+.group2{
+    order:1;
+}
+
+/*justify-content*/
+.flex-end{
+    justify-content: flex-end;
+}
+.center{
+    justify-content: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+
+/*align-items*/
+.flex-start{
+    align-items: flex-start;
+}
+.flex-end{
+    align-items: flex-end;
+}
+.center{
+    align-items: center;
+}
+.baseline{
+    align-items: baseline;
+}
+.largest-item{ 
+    padding-top:2em;
+}
+
+.flex-containers {
+    display: flex;
+    border:1px #ccc solid;
+    justify-content: space-between;
+    align-items: stretch;
+    height:12em;
+}
+.flex-items {
+    text-align:center;
+    font-size: 1em;
+    padding: 1.2em;
+    color: white;
+}
+
+/*align-self позволяет переопределить значение свойства align-items для одного элемента*/
+.item1 {background-color: #675BA7; align-self: center; }
+.item2 {background-color: #9BC850; align-self: flex-start;}
+.item3 {background-color: #A62E5C; align-self: flex-end;}
+.item4 {background-color: #2A9FBC; align-self: center;}
+
+/*Свойство align-content управляет выравниванием рядов (строк и столбцов) во flex-контейнере*/
+.flex-container2 {
+    display: flex;
+    border:1px #ccc solid;
+    flex-wrap: wrap;
+    height:200px;                
+    align-content: space-between;
+    flex-direction: column;
+}
+.flex-item2 {
+    text-align:center;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+}
+.item11 {background-color: #675BA7;}
+.item12 {background-color: #9BC850;}
+.item13 {background-color: #A62E5C;}
+.item14 {background-color: #2A9FBC;}
+.item15 {background-color: #F15B2A;}
+
+/*Свойство flex-basis определяет начальный размер flex-элемента до того, как он начнет изменять размер, подстраиваясь под размеры flex-контейнера*/
+.item10 {background-color: #675BA7; flex-basis: auto; width:150px;}
+.item20 {background-color: #9BC850; flex-basis: auto; width:auto;}
+.item30 {background-color: #A62E5C; flex-basis: 200px;width:150px;}
+
+/*flex-shrink. Оно указывает, как элемент будет усекаться относительно других элементов*/
+.flex-container11 {
+    display: flex;
+    border:1px #ccc solid;
+    width:400px;
+}
+.flex-item11 {
+    text-align:center;
+    font-size: 1em;
+    padding: 1.2em;
+    color: white;
+}
+.item7 {background-color: #675BA7; flex-basis: 200px; flex-shrink:1;}
+.item8 {background-color: #9BC850; flex-basis: 200px; flex-shrink:2;}
+.item9 {background-color: #A62E5C; flex-basis: 200px; flex-shrink:3;}
+
+/*Свойство flex-grow управляет расширением элементов*/
+.flex-container3 {
+    display: flex;
+    border:1px #ccc solid;
+}
+.item15 {background-color: #675BA7; flex-grow:0;}
+.item21 {background-color: #9BC850; flex-grow:1;}
+.item31 {background-color: #A62E5C; flex-grow:2;}
+
+/*flex: [flex-grow] [flex-shrink] [flex-basis] / flex: 1 1 auto;}*/

@@ -1,0 +1,81 @@
+.maindiv{
+	background-color: green;
+	border: 1px solid #222;
+	margin: 5px;
+	float: left;
+	width: 240px;
+	height: 500px;
+}
+p{
+	color: blue;
+	margin: 10px;
+}
+.skip{
+	color: blue;
+	margin: 10px;	
+}
+/*:enabled: выбирает элемент, если он доступен для выбора (то есть у него не установлен атрибут disabled)*/
+:enabled{
+    border: 2px red solid;
+    color: red;
+}
+/*Селектор :checked + span позволяет выбрать элемент, соседний с отмеченным элементом формы.*/
+:checked + span{
+    color: red;
+    font-weight: bold;  /* выделение жирным */
+}
+/*Псевдокласс :default выбирает стандартный элемент на форме*/
+:default {
+    border: 2px solid red;
+}
+/*Псевдоклассы :valid и :invalid стилизуют элементы формы в зависимости от того, проходят они валидацию или нет*/
+input:invalid {
+    border: 2px solid red;
+}
+input:valid {
+    border: 2px solid green;
+}
+/*Псевдоклассы :in-range и :out-of-range стилизуют элементы формы в зависимости от того, 
+попадает ли их значение в определенный диапазон. Это в первую очередь относится к элементу <input type="number" >*/
+:in-range{
+    border: 2px solid green;
+}
+:out-of-range{
+    border: 2px solid red;
+}
+/*Псевдоклассы :required и :optional стилизуют элемент в зависимости от того, установлен ли у него атрибут required:*/
+:optional {
+    border: 2px solid blue;
+}
+:required {
+	border: 2px solid red;
+}
+
+/*::first-letter: позволяет выбрать первую букву из текста*/
+.firstp::first-letter { color:red; font-size: 25px; }
+
+/*псевдоэлементы before и after:*/
+.warning::before{ content: "Важно! "; font-weight: bold; color: red;}
+.warning::after { content: " Будьте осторожны!"; font-weight: bold; color: red;}
+
+/*псевдоэлемент selection для стилизации выбранных элементов*/
+::selection {
+    color: white;
+    background-color: black;
+}
+/*значение атрибута type: если оно имеет значение text*/
+input[type="text"]{
+     
+    border: 2px solid red;
+}
+
+.link[href="http://apple.com"]{
+             
+    color: red;
+}
+
+/*все ссылки, которые используют протокол https*/
+a[href^="https://"]{
+             
+    color: green;
+}

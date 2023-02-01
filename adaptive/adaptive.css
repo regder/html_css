@@ -1,0 +1,31 @@
+body {
+    background-color: #ddd;
+}
+/*Далее остальные стили*/
+@media (max-device-width:480px){
+    body {
+        background-color: #bbb;
+    }
+    /*Далее остальные стили*/
+}
+@media (min-device-width:481px) and (max-device-width:768px){
+    body {
+        background-color: #eee;
+    }
+}
+/*Применяемые функции в CSS3 Media Query:
+aspect-ratio: отношение ширины к высоте области отображения (браузера)
+device-aspect-ratio: отношение ширины к высоте экрана устройства
+max-width/min-width и max-height/min-height: максимальная и минимальная ширина и высота области отображения (браузера)
+max-device-width/min-device-width и max-device-height/min-device-height: максимальная и минимальная ширина и высота экрана мобильного устройства
+orientation: ориентация (портретная или альбомная)*/
+
+.hidden{
+    display:none;
+}
+#playBtn {
+    border: solid 1px #333;
+    padding: 5px;
+    cursor: pointer;
+}
+

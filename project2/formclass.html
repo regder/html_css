@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Псевдоклассы форм</title>
+		<link rel="stylesheet" type="text/css" href="formstyle.css"/>
+	</head>
+	<body>
+		<h1>Псевдоклассы форм</h1>
+		<div class="maindiv">
+			<p>Duis autem dolor in hendrerit in vulputate velit esse molestie consequat, vel 
+			illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
+			dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore te 
+			feugat nulla facilisi.</p>
+		</div>
+		<p class="skip">----------------------------</p>
+		<p><input type="text" value="Enabled" /></p>
+        <p><input type="text" disabled value="Disabled" /></p>
+		
+		<p class="skip">----------------------------</p>
+
+		<h2>Выберите технологию</h2>
+        <p>
+            <input type="checkbox" checked name="html5"/><span>HTML5</span>
+        </p>
+        <p>
+            <input type="checkbox" name="dotnet"/><span>.NET</span>
+        </p>
+        <p>
+            <input type="checkbox" name="java"/><span>Java</span>
+        </p>
+             
+        <h2>Укажите пол</h2>
+        <p>
+            <input type="radio" value="man" checked name="gender"/><span>мужской</span>
+        </p>
+        <p>
+        	<input type="radio" value="woman" name="gender"/><span>женский</span>
+        </p>
+        <p class="skip">----------------------------</p>
+        <form>
+        	<p><input type="text" name="login" placeholder="Введите логин" required /></p>
+        	<p><input type="password" name="password" placeholder="Введите пароль" required /></p>
+        	<input type="submit" value="Войти" />
+    	</form><br/><br/>
+    	<form>
+            <p>
+                <label for="age">Ваш возраст:</label> 
+                <input type="number" min="1" max="100" value="10" id="age" name="age"/>
+            </p>
+            <input type="submit" value="Отправить" />
+        </form>
+        <p class="skip">----------------------------</p>
+        <form>
+            <p>
+                <label for="login">Логин:</label> 
+                <input type="text" id="login" name="login" required />
+            </p>
+            <p>
+                <label for="password">Пароль:</label> 
+                <input type="password" id="password" name="password" required />
+            </p>
+            <p>
+                <label for="name">Имя:</label> 
+                <input type="text" id="name" name="name"/>
+            </p>
+            <input type="submit" value="Регистрация" />
+        </form>
+        <p class="firstp">Но он ничего не видал. Над ним не было ничего уже, кроме неба, — высокого неба, не ясного, но все-таки неизмеримо высокого, с тихо ползущими по нем серыми облаками.</p>
+        <p><span class="warning">Не пытайтесь засунуть язык в электрическую розетку.</span></p>
+        <p>Пседвоэлементы в CSS3 позволяют форматировать текст.</p>
+        <form>
+        	<p><input type="text" id="login" /></p>
+        	<p><input type="password" id="password" /></p>
+        	<input type="submit" value="Send" />
+        </form>
+        <a class="link" href="http://microsoft.com">Microsoft</a> | 
+        <a class="link" href="https://google.com">Google</a> | 
+        <a class="link" href="http://apple.com">Apple</a>
+	</body>
+</html>
