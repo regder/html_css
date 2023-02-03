@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin:0;
+    padding:0;
+    background-color: rgb(117, 125, 139);
+}
+h2{
+    text-align: center;
+}
+.grid-container {
+    height: 100vh;
+    border: solid 5px rgb(194, 79, 175);
+    display: grid;
+    /* flex-фактор * доступное_пространство  / сумма всех flex-факторов */
+    /* ширина второго столбца = 2 * (ширина_грида - 8em) / (2 + 1) = grid-template-columns: 8em 2fr 1fr; */
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* отступ */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    
+    /* Первый столбец имеет фиксированную ширину в 8em, 
+    а второй и третий столбцы - автоматическую ширину. 
+    И также первая и третья строки имеют автоматическую высоту, 
+    а вторая строка - фиксированную */
+    /* grid-template-columns: repeat(3, auto); */
+    /* grid-template-columns: 8em auto auto; */
+    /* grid-template-rows: repeat(4, 100px); */
+    /* grid-template-rows: auto 5em auto; */
+    /* grid: repeat(4, 5em) / repeat(3, 8em); */
+
+    /* с помощью свойства grid-auto-flow можно изменить направление элементов */
+    grid-auto-flow: column;   
+}
+/* Свойство order позволяет задать порядок элементов */
+.last-item{
+    order: 1;
+}
+.first-item{
+    order: -1;
+}
+.special-item{
+    /* span можно задать растяжение элемента на несколько ячеек */
+    grid-row: 1 / span 2; /*1 row-line and 2 row*/
+    grid-column: 3 / span 2; /*3 colomn-line and 2 colomn*/
+
+    /* grid-area: row-start / column-start / row-end / column-end = grid-area: 1 / 2 / 3 / 4; */
+}
+.grid-item {   
+    border: 2px solid #000;    
+    text-align:center;
+    font-size: 1.1em;
+    padding: 1.5em;
+    color: white;
+    z-index: 1;
+}
+.item1{
+    grid-area: 1 / 1 / 3 /5;
+    opacity: 0.8;
+}
+.item2{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.item3{
+    grid-area: 1 / 4 / 2 / 5;
+}
+.item4{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.item5{
+    grid-area: 2 / 2 / 3 / 4;
+}
+.item6{
+    grid-area: 2 / 4 / 3 / 5;
+}
+.item7{
+    grid-area: 3 / 1 / 4 / 5;
+}
+
+.color1 {background-color: #675BA7;}
+.color2 {background-color: #9BC850;}
+.color3 {background-color: #A62E5C;}
+.color4 {background-color: #2A9FBC;}
+.color5 {background-color: #4e342e;}
+
+/* layout */
+.grid-containers {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 6em 10px 1fr;
+    grid-template-columns: [mainstart] 1fr [mainend] 10px [sidebarestart] 25% [sidebarend];
+}
+.grid-item-content {
+    background-color: #455a64;
+    grid-row: 3 / 4;
+    grid-column: mainstart / mainend;
+}
+.grid-item-sidebar {
+    background-color: #37474f;
+    grid-row: 3 / 4;
+    grid-column: sidebarestart / sidebarend;
+}
+
+.grid-item-header{
+    background-color: #263238;
+    grid-row: 1 / 2;
+    grid-column: mainstart / sidebarend;
+}
+.grid-items {
+    color: #fff;
+    text-align: center;
+}
+
+/* grid-template-areas */
+.grid-container2 {
+    height:100vh;
+    display: grid;
+    grid-template-areas: "header header header header header"
+                                     ". . . . ."
+                                     "menu . content . sidebar"
+                                     ". . . . ."
+                                     "footer footer footer footer footer";
+    grid-template-columns: 250px 5px 1fr 5px 200px;
+    grid-template-rows: 100px 5px 1fr 5px 100px;
+}
+.header { grid-area: header /* элемент с классом header помещается в область header*/; 
+    background-color: rgb(57, 141, 46); 
+    text-align: center; 
+    border: 2px solid #000; 
+}
+.menu { grid-area: menu; background-color: #ccc; border: 2px solid #000; }
+.sidebar { grid-area: sidebar; background-color: rgb(40, 90, 102);text-align: center; border: 2px solid #000 }
+.content { grid-area: content; background-color: rgb(185, 97, 97);text-align: center; border: 2px solid #000}
+.footer { grid-area: footer; background-color: #bbb; border: 2px solid #000; }
