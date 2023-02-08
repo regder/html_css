@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Grid Layout в CSS3</title>     
+        <style>
+            body{
+                background-color: #333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100hv;                
+            }
+           .tabs{
+                display: flex;
+                flex-wrap: wrap;
+                width: 380px;    
+            }
+            .tabs label{
+                order: 1;
+                display: block;
+                padding: 10px 15px;
+                margin-right: 0.2em;
+                cursor: pointer;
+                background-color: yellow;
+                font-weight: bold;
+                transition: background ease 0.3s;    
+            }
+            .tabs .tab{
+                order: 99;
+                flex-grow: 1;
+                width: 100%;
+                height: 280px;
+                display: none;
+                padding: 1rem;
+                background-color: #fff;
+            }
+            .tabs input[type="radio"]{
+                display: none;
+            }
+            .tabs input[type="radio"]:checked
+            +label{
+                background-color: #fff;
+            }
+            .tabs input[type="radio"]:checked
+            +label+.tab{
+                display: block;    
+            } 
+        </style>  
+    </head>
+    <body>        
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone">First</label>
+            <div class="tab">
+                <h2>first</h2>
+                <p>iPhone 14 Pro вышел в новом дизайне — без фирменной «челки». 
+                Также в ассортименте появился новый цвет. 
+                В смартфоне, в отличие от «обычных» 14-х айфонов, 
+                установлен процессор A16 Bionic, который может 
+                за секунду производить 4 трлн операций с фото.</p>
+            </div>
+                    
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo">Second</label>                    
+            <div class="tab">
+                        <h2>Second</h2>
+                        <p>Обновлены фронтальная камера (она снабжена автофокусом и 
+                    быстрее распознает пользователя в условиях недостаточной освещенности) и 
+                    сенсор основной камеры.</p>
+            </div>
+
+            <input type="radio" name="tabs" id="tabthree">
+            <label for="tabthree">Third</label>                    
+            <div class="tab">
+                <h2>Second</h2>
+                <p>Все модели оснащены однокристальной системой A16 Bionic, 
+                48-мегапиксельной основной камерой и экранами ProMotion 
+                с защитой Ceramic Shield и частотным диапазоном 1 — 120 Гц, 
+                а также ускоренной памятью LPDDR5. Дизайн линейки обновлен, 
+                а фронтальной</p>
+            </div>
+        </div>                       
+    </body>
+</html>
